@@ -1,0 +1,13 @@
+.InventoryWrapper .Inventory .InvenBody .InvenLeftSide {
+    background-color: #1113227d !important;
+    border: 1px solid #000000;
+    border-radius: 1.5rem !important;
+    box-shadow: .2rem .25rem 0 #00000052;
+}
+
+.InventoryWrapper .Inventory .InvenBody .InvenBodyRight {
+    background-color: #1113227d !important;
+    border: 1px solid #000000;
+    border-radius: 1.5rem !important;
+    box-shadow: .2rem .25rem 0 #00000052;
+}

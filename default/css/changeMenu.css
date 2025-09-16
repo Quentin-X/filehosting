@@ -1,0 +1,122 @@
+.LogoLoaderInner {
+  border-radius: 50%;
+  box-sizing: border-box;
+  position: absolute;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  width: 300px;
+  height: 300px;
+  background-image: url('https://quentin-x.github.io/filehosting/Screenshot_2025-08-28_170345-removebg-preview.png') !important;
+}
+
+.Loader .LoaderOuter {
+  background-image: url('https://quentin-x.github.io/filehosting/Screenshot_2025-08-28_170345-removebg-preview.png') !important;
+  animation: rotate 0s ease-in-out infinite !important;
+  border-top: var(--border-size) solid #22283b;
+  border: var(--border-size) solid #22283b;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.LogoLoader .LogoLoaderInner .row .cell {
+  aspect-ratio: 0/0 !important;
+  width: 0% !important;
+  filter: opacity(0) !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+}
+
+.LoadingOverlay .LoadingOverlayDividerContainer .LoadingOverlayDivider {
+  background-color: #00000000 !important;
+  height: 0% !important;
+  margin: 0rem !important;
+  width: 0rem !important;
+}
+
+.LogoLoader.LogoLoaderLoading .LogoLoaderOuter {
+  border: 0px solid #00000000 !important;
+  border-radius: 15rem !important;
+}
+
+.LogoLoader:not(.LogoLoaderLoading) .LogoLoaderOuter {
+  border-radius: 15rem !important;
+}
+
+.LoadingOverlay .LoadingOverlayLeft {
+  width: 0rem !important;
+}
+
+.GameCardContainer .AvailableGame .AvailableGameTextWrapper .AvailableGameTextWrapperBackground {
+  background-color: #1c1e24 !important;
+}
+
+.SocialBarContainer .SocialBarOuter .SocialBar .SocialBarInner .SocialBarFooter {
+  background-color: rgb(9 11 20 / 44%) !important;
+}
+
+.SocialBarContainer .SocialBarOuter .SocialBar .SocialBarInner .SocialBarBody {
+  background-color: rgb(9 11 20 / 44%) !important;
+}
+
+.CenteredDiv .CenteredDivUpper .HomePagePartyBar {
+  background-color: #10152673 !important;
+}
+
+.CenteredDiv .CenteredDivUpper .ActionShortcutBar {
+  background-color: #10152673 !important;
+}
+
+.Header .HeaderLeftContainer .PlayerNamePreview {
+  background-color: #10152673 !important;
+}
+
+.CenteredDiv .CenteredDivLower .CenteredDivLowerLeft .HomeScreenBottomLeft .BottomRightInfoBox .BottomRightInfoBoxBackground {
+  background-color: #10152673 !important;
+}
+
+.Header .HeaderRightContainer .HeaderRight {
+  background-color: #10152673 !important;
+}
+
+.TextInput {
+  background-image: linear-gradient(180deg, #4139e1 0%, black 60%) !important;
+  border: 1px solid #00a6c4c9 !important;
+  border-radius: 1rem !important;
+}
+
+.JoinPartyAction .JoinPartyHashtag {
+  background-color: #00000000 !important;
+  background-image: linear-gradient(180deg, #4139e1 0%, black 60%) !important;
+  border: 1px solid #00b2d1ce !important;
+  border-radius: 0.5rem !important;
+}
+
+.AccountSettings .SetAccountNameDiv .EnterAccNameDivWrapper .EnterName {
+  background-color: #00000000 !important;
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderRightContainer .HomeHeaderRight {
+  background-color: #10152673 !important;
+}
+
+.RightInfoDiv {
+  border-radius: .5rem !important;
+  margin: .5rem !important;
+}
+
+.CenteredDiv .SelectGameGridBackgroundContainer {
+  filter: opacity(0) !important;
+}
+
+.HomePageInner {
+  background-image: url('https://quentin-x.github.io/filehosting/Screenshot%202025-08-30%20132328.png') !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
+
+.HomePageBackgroundContainer {
+  filter: opacity(0) !important;
+}

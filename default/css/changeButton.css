@@ -1,0 +1,31 @@
+.BlueButton {
+  background-image: linear-gradient(180deg, #4139e1 0%, black 60%) !important;
+  background-color: #00000000 !important;
+  border: 1px solid #41dcffdb !important;
+}
+
+.BlueButton .ButtonBottomBorder {
+  background-color: #00000000 !important;
+}
+
+.BlueButton .ButtonTopBorder {
+  background-color: #00000000 !important;
+}
+
+.RedButton {
+  background-image: linear-gradient(180deg, #4139e1 0%, black 60%) !important;
+  background-color: #00000000 !important;
+  border: 1px solid #a12323db !important;
+}
+
+.NewButton {
+  background-image: linear-gradient(180deg, #4139e1 0%, black 60%) !important;
+  background-color: #00000000 !important;
+  border: 1px solid #ffdb2bdb !important;
+}
+
+.CreatePartyButton {
+  background-image: linear-gradient(180deg, #4139e1 0%, purple 60%) !important;
+  background-color: #00000000 !important;
+  border: 1px solid #a348ffbf !important;
+}

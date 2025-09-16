@@ -1,0 +1,55 @@
+.ShopBody {
+  background-color: #06080c96 !important;
+  border-radius: 1.5rem !important;
+}
+
+.SidebarMenu .SidebarMenuTitle.ActiveSidebarMenuTitle {
+  background-color: #00000000 !important;
+  background-image: linear-gradient(180deg, #4139e1 0%, black 60%) !important;
+  border: 0px solid #00000000 !important;
+  color: #35ebff !important;
+}
+
+.ShopSidebarMenu {
+  background-color: #06080c36 !important;
+}
+
+.SidebarMenu {
+  background-color: #0c0d125e !important;
+}
+
+.ShopItem {
+  background-color: #18191cc7 !important;
+}
+
+.ShopItemHeaderDiv {
+  background-color: #0505077d !important;
+}
+
+.SelectedItemViewer {
+  background-color: #18191cc7 !important;
+}
+
+.SelectedItemHeaderDiv {
+  background-color: #0505077d !important;
+}
+
+.ShopBody .ShopMenuBody .ShopItemsWrapper .ShopItems .ShopItem.ShopItemNoInputCanBuy {
+  background-color: #00000000 !important;
+  background-image: linear-gradient(180deg, #4139e1 0%, black 60%) !important;
+  filter: brightness(1) !important;
+}
+
+.ShopBody .ShopMenuBody .ShopItemsWrapper .ShopItems .ShopItem.ShopItemNoInputCanBuy {
+  border: 2px solid #35ebff !important;
+}
+
+.ShopBody .ShopMenuBody .ShopItemsWrapper .ShopItems .ShopItem.ShopItemNoInput {
+  background-color: #00000000 !important;
+  background-image: linear-gradient(180deg, #4139e1 0%, black 60%);
+  filter: brightness(0.5);
+}
+
+.ShopBody .ShopMenuBody .ShopItemsWrapper .ShopItems .ShopItem {
+  border-radius: 1.5rem !important;
+}

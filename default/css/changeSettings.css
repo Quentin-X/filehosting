@@ -1,0 +1,88 @@
+.SettingsMenu {
+  background-color: #14192896 !important;
+  border-radius: 1rem !important;
+  border: 1px solid #4139e1 !important;
+  box-shadow: 0 0 20px rgb(65, 105, 225), inset 0 0 5px rgba(65, 105, 225, 0.9) !important;
+}
+
+.SettingsMenuLeft {
+  background-color: #00000000 !important;
+  background-image: linear-gradient(352deg, #4139e1 0%, black 60%) !important;
+}
+
+.BloxdDropdownControl {
+  background-color: #424d6100 !important;
+  background-image: linear-gradient(352deg, #4139e1 0%, black 60%) !important;
+  border-color: #4139e1 !important;
+  border-radius: 0;
+  color: black;
+  font-size: 1em;
+  padding-right: 6em;
+}
+
+.SettingsMenuRightInner .SettingBox {
+  background-color: #424d6100 !important;
+  background-image: linear-gradient(352deg, #4139e1 0%, black 60%) !important;
+  border: 1px solid #11ecff !important;
+  border-radius: 1rem !important;
+}
+
+.SettingsMenuRightInner .SettingBoxGroup>.SettingBox:first-of-type {
+  box-shadow: 0 0 20px rgb(255, 7, 7), inset 0 0 5px rgba(255, 22, 22, 0.9);
+}
+
+.SettingsMenuRightInner .SettingsBoxWarning {
+  color: #dd0000 !important;
+  box-shadow: 0 0 20px rgb(255, 7, 7), inset 0 0 5px rgba(255, 22, 22, 0.9);
+  border: 2px solid #d10000 !important;
+}
+
+.BloxdDropdownMenu {
+  background-color: #424d6100 !important;
+  background-image: linear-gradient(352deg, #4139e1 0%, black 60%) !important;
+  border-color: #1ef1ff !important;
+  border-radius: 0;
+  color: black;
+  font-size: 1em;
+}
+
+.UpdateLogsContainer .UpdateLog {
+  background-color: #00000000 !important;
+  background-image: linear-gradient(352deg, #4139e1 0%, black 60%) !important;
+  border-radius: 1.5rem !important;
+}
+
+.ControlsContainer .ControlRow {
+  background-color: #424d6100 !important;
+  background-image: linear-gradient(352deg, #4139e1 0%, black 60%) !important;
+  border-radius: 1rem !important;
+  border: 1px solid #1ab9ff !important;
+}
+
+.ControlsContainer .ControlRow .ControlRowWarning {
+  background-color: #00d8ff !important;
+}
+
+.InviteLinkInner {
+  background-image: linear-gradient(352deg, #4139e1 0%, black 60%) !important;
+  border: 1px solid #1ab9ff !important;
+}
+
+.ActiveSettingsSectionTitle {
+  background-color: #00000000 !important;
+  background-image: linear-gradient(352deg, #4139e1 0%, black 60%) !important;
+  border: 0px solid #00000000 !important;
+  color: #35ebff !important;
+}
+
+.Menu .MenuBody {
+  background-color: #14192896 !important;
+}
+
+.Menu .MenuSideBar {
+  background-color: #1a1d2873 !important;
+}
+
+.SocialBarContainer .SocialBarOuter .SocialBar .SocialBarInner {
+  border-radius: 1rem !important;
+}

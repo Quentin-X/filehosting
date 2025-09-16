@@ -1,0 +1,26 @@
+.BottomScreenStatBarBackground {
+  background-color: #03092f;
+  border-radius: .9rem !important;
+  border-top-left-radius: 0rem !important;
+  border-bottom-right-radius: 0rem !important;
+  height: 2.5rem;
+  overflow: hidden;
+  width: 13rem;
+  border-bottom-right-radius: 0rem !important;
+  border-top-left-radius: 0rem !important;
+}
+
+.HealthBar {
+  background-color: #1cafe200 !important;
+  box-shadow: inset 0 .4rem 0 0 #ffffff1a, inset 0 -.4rem 0 0 #00000015 !important;
+  background-image: linear-gradient(90deg, red 0%, yellow 60%) !important;
+}
+
+.BottomScreenStatBarWrapper {
+  left: 12rem !important;
+}
+
+.ControlsContainer .ControlRow.WarningBorder {
+  border: 0px #0e0c0c00 !important;
+  background-image: linear-gradient(180deg, #4139e1 0%, black 60%) !important;
+}
