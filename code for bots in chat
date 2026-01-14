@@ -1,0 +1,295 @@
+/*
+	tick onClose onPlayerJoin onPlayerLeave onPlayerJump onRespawnRequest
+	playerCommand onPlayerChat onPlayerChangeBlock onPlayerDropItem
+	onPlayerPickedUpItem onPlayerSelectInventorySlot onBlockStand
+	onPlayerAttemptCraft onPlayerCraft onPlayerAttemptOpenChest
+	onPlayerOpenedChest onPlayerMoveItemOutOfInventory onPlayerMoveInvenItem
+	onPlayerMoveItemIntoIdxs onPlayerSwapInvenSlots onPlayerMoveInvenItemWithAmt
+	onPlayerAttemptAltAction onPlayerAltAction onPlayerClick
+	onClientOptionUpdated onMobSettingUpdated onInventoryUpdated onChestUpdated
+	onWorldChangeBlock onCreateBloxdMeshEntity onEntityCollision
+	onPlayerAttemptSpawnMob onWorldAttemptSpawnMob onPlayerSpawnMob
+	onWorldSpawnMob onWorldAttemptDespawnMob onMobDespawned onPlayerAttack
+	onPlayerDamagingOtherPlayer onPlayerDamagingMob onMobDamagingPlayer
+	onMobDamagingOtherMob onAttemptKillPlayer onPlayerKilledOtherPlayer
+	onMobKilledPlayer onPlayerKilledMob onMobKilledOtherMob onPlayerPotionEffect
+	onPlayerDamagingMeshEntity onPlayerBreakMeshEntity onPlayerUsedThrowable
+	onPlayerThrowableHitTerrain onTouchscreenActionButton onTaskClaimed
+	onChunkLoaded onPlayerRequestChunk onItemDropCreated
+	onPlayerStartChargingItem onPlayerFinishChargingItem doPeriodicSave
+
+	To use a callback, just assign a function to it in the world code!
+	tick = () => {}			 or			 function tick() {}
+*/
+
+api.log("World code callbacks go here!")
+
+let lastMsg = ""
+g=(e={})=>{let a=e.w||10,o=e.l||22,r=e.p||60000,i=e.o||0,l=["Awesome","Exalted","Frantic","Merry","Alert","Amusing","Bored","Brave","Calm","Chilly","Clever","Clumsy","Cranky","Crazy","Excited","Foolish","Fussy","Fuzzy","Glowing","Crafty","Lumpy","Messy","Mighty","Peppy","Nimble","Polite","Proud","Quick","Quiet","Rusty","Shining","Silly","Sleepy","Slimy","Sloppy","Smooth","Speedy","Stinky","Strict","Tough","Tricky","Wild","Wise","Worried","Haunted","Fierce","Opulent","Saucy","Irksome","Famous","Feral","Fresh","Spoony","Noisy","Amazing","Gangly","Juicy","Ancient","Frosty","Savage","Fiery","Enraged","Surly","Helpful","Simple","Feisty","Toasty","Joyful","Humble","Extreme","Grumpy","Snoozy","Sneaky","Cheeky","Shrewd","Cunning","Motley","Primal","Harsh","Sandy","Funny","Gentle","Elegant","Fancy","Scruffy","Eager","Jolly","Witty","Nervous","Careful","Gifted","Melodic","Raspy","Modern","Fluffy","Prickly","Shaggy","Ghastly","Exotic","Spicy","Salty","Elusive","Magical","Beloved","Squeaky","Shiny","Singing","Pink","Raging","Unruly","Scary","Flappy","Tiny","Haughty"],n=["Turtle","Fox","Hawk","Falcon","Eagle","Jester","Joker","Potato","Ace","Flyer","Driver","Turkey","Chicken","Donkey","Goat","Llama","Weasel","Koala","Wolf","Cook","Hippie","Boss","Goose","Crawdad","Toaster","HotDog","Wizard","Unicorn","Ninja","Samurai","Cowboy","Vampire","Pirate","Ogre","Mentor","Narwhal","Cactus","Bigfoot","Farmer","Knight","Ghost","BLT","Baby","Eyeball","Hamster","Toad","Wombat","Worm","Hare","Zombie","Mutant","Mime","Sheriff","Toast","Pancake","Plumber","Penguin","Hammer","Panda","Octopus","Wallaby","Lemur","Burrito","Avenger","Bobcat","Donut","Cobra","Yodeler","Diva","Coconut","Moose","Tiger","Walrus","Coyote","Lion","Puma","Mango","Cake","Ostrich","Caveman","Ukulele","Furball","Manatee","Buffalo","Paladin","Shaman","Warrior","Rogue","Warlock","Druid","Scout","Banshee","Artisan","Citizen","Badger","Bear","Beast","Centaur","Coward","Cyclops","Hominid","Goblin","Kobold","Gremlin","Gryphon","Kraken","Mystic","Nomad","Peasant","Pegasus","Rhino","Sapling","Yeti","Sphinx","Villain","Warthog","Squire","Cheese","Spider","Lemon","Truck","Banana","Elf","Alpaca","Dragon","Raccoon","Taco","Witch"],t=[],y=~~((Date.now()+i)/r);for(let e=0;e<a;e++){let a,r=(a=1779033703^y-e,a=Math.imul(a^a>>>16,2246822507),a=Math.imul(a^a>>>13,3266489909),(a^a>>>16)>>>0),i=()=>Math.abs(r=1664525*r+1013904223|0),u=l[i()%l.length]+n[i()%n.length],s="";for(let e=0,a=o-u.length;e<a;e++)s+=i()%10;t.push(u+s)}return t};
+guestNames = g()
+  function typo(originalString, typoChance) {
+if (typoChance < 0 || typoChance > 1) {
+return originalString;
+}
+let newString = "";
+let i = 0;
+while (i < originalString.length) {
+if (Math.random() < typoChance) {
+const typoType = Math.floor(Math.random() * 4);
+switch (typoType) {
+case 0:
+i++;
+break;
+case 1:
+const repeatChar = Math.random() < 0.5 && i > 0
+? originalString[i - 1]
+: originalString[i + 1];
+newString += repeatChar??"";
+newString += originalString[i]??"";
+i++;
+break;
+case 2:
+const chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
+const randomReplacement = chars.charAt(Math.floor(Math.random() * chars.length));
+newString += randomReplacement;
+i++;
+break;
+case 3:
+if (i + 1 < originalString.length) {
+newString += originalString[i + 1]??"";
+newString += originalString[i]??"";
+i += 2;
+} else {
+newString += originalString[i];
+i++;
+}
+break;
+}
+} else {
+newString += originalString[i];
+i++;
+}
+}
+return newString;
+}
+function seval(str){if(typeof str !== 'string'||str.trim()===''){return undefined}
+if(str.includes('//')||str.includes('**')){return undefined}
+let processedStr=str.replace(/([0-9.)])\s*\(/g,'$1*(').replace(/x|X/g,'*');
+let sanitizedStr=processedStr.replace(/[^0-9.+\-*/^()]/g,'');
+let evalStr=sanitizedStr.replace(/\^/g,'**');
+try{if(evalStr===''||!/[0-9]/.test(evalStr)){return undefined}
+return eval(evalStr)}catch(e){return undefined}}
+function randIP() {return Math.floor(Math.random()*256)+"."+Math.floor(Math.random()*256)+"."+Math.floor(Math.random()*256)+"."+Math.floor(Math.random()*256)}
+let botNames = [
+"mrgae",
+"Devilisgae",
+"log_on_ur_acc",
+"foff",
+"sussy_backa",
+"pugggy",
+"nodding",
+"reked",
+"move",
+"play_tag",
+"teese",
+"voke",
+]
+chatEvents = {
+join:{player:null,talk:0},
+chat:{player:null,talk:0,msg:""},
+leave:{player:null,talk:0},
+}
+let msgs = {
+gen:[
+"yo anyone can help me code pls",
+"CREATIVE PLS I BEG OR CO OWNER IS ALSO FINE",
+"who owner",
+"anyone espanol???",
+"wdym",
+"I mean like I want to know yes or no",
+"1v1 anyone??",
+"Ye",
+"No",
+"OFC NOT",
+"bruh, like, wdym",
+"what...?",
+"that was so abrupt",
+"anyone pick a number between 1 and 10 and i will guess",
+"bro what is going on in chat",
+"BRO THAT GUY WAS A HACKER! REPORTED!",
+"yo how am i in creative",
+"jk",
+"guys pls join my party",
+"anyone?",
+"yep exactly.",
+"hash tables can work",
+"how am I meant to work with this",
+"bro what is this world",
+"owner this world is very nice, can you please friend me, I want co owner.",
+"jkjk",
+"Timothy said he will make world code limit higher soon",
+"Yo I have yet another anti-interrupt framework",
+"just use my os lol, like, it supports literal file loading and saving",
+"that's all it does tho isnt it",
+"I hate how snowdashes go sideways and not forwards",
+"Releasing a new implementation of of setTimeOut!!!",
+"it's interruption safe",
+"nothing in bloxd is interruption safe",
+"no wdym",
+"yep, he is.",
+"someone gift me super pls",
+"I am a bloxd dev.",
+"Hello, how may I assist you?",
+"kk",
+"pls admin",
+"gimme admin or i ban u",
+"you have a few more seconds",
+"donating super, who wants?",
+"me",
+"ye ofc it does",
+"did it work",
+"onPlayerMove callback has been released!!!",
+"tp for shop",
+"tp for pvp",
+"OMG I GOT 2 DIRT",
+"gimme creative plzzz",
+"abc to adopt me",
+],
+join: [
+"hi",
+"hello,",
+"yo wsp",
+"yo wsg",
+"sup",
+"wsp",
+"wsg",
+"yo",
+"look who we have here. it is our very own",
+],
+chat: [
+["wdym \"",false,"\""],
+["lol ",true," is crashing out"],
+["wait ru sure ",true,"??"],
+["NO. WAY. ",false,"..."],
+["so like '",false,"' u mean now there is?"],
+["wdym ",true,""],
+["ok ",true,". whatever u say."],
+["no way ",true," is for real"],
+["bro ru kidding me ",true,""],
+["",true," is correct"],
+["Exactly. ",false,"..."],
+["YEA IKR! ",false," FR!!!"],
+["bro rlly said \"",false,"\""],
+["nahh ",true," is autoclicking"],
+["BRO ",true," IS HACKING"],
+["Wow! You are the best ",true,"! and please don't say that again!"],
+]
+}
+chatMsgCache = [
+"Hi there",
+"Yup",
+"Nup",
+"Nope",
+"Les gooooo",
+"Les goooo",
+"Les gooo",
+"are you there",
+"done",
+"ooh interesting...",
+]
+responses = {}
+let botsNum = 10
+let chatLevel = 0.02
+
+broadcasts = []
+
+tick=()=>{
+if(broadcasts.length>0){
+api.broadcastMessage(broadcasts.shift())
+}
+if(Math.random()<chatLevel){
+let num = Math.floor(Math.random()*botsNum)
+let name = (Math.random()<0.5)?(botNames[num]):(guestNames[num])
+let msg = ''
+if((responses[lastMsg]!==undefined)&&(Math.random()>0.3)){
+msg = responses[lastMsg]
+} else {
+if(chatEvents.join.talk>0){
+msg = msgs.join[Math.floor(Math.random()*msgs.join.length)]+" "+chatEvents.join.player
+chatEvents.join.talk--
+} else if(chatEvents.chat.talk>0 && chatEvents.chat.player) {
+chatEvents.chat.talk--
+
+let m = chatEvents.chat.msg
+let ml = m.toLowerCase()
+let sw = ml.startsWith
+let ans = seval(m)
+
+
+if((Math.random()>0.2)&&(ans!==undefined)){
+
+msg = ans+""
+} else if((ml.includes("what")||ml.includes("wut"))&&ml.includes("ip")) {
+msg = "The ip adress is: "+randIP()
+chatEvents.chat.talk=0
+} else if((ml.startsWith("is")||ml.startsWith("are")||ml.startsWith("was")||ml.startsWith("were"))&&(Math.random()>0.2)){
+
+msg = (Math.random()>0.5)?"yes":"no"
+} else {
+
+let style = msgs.chat[Math.floor(Math.random()*msgs.chat.length)]
+msg = style[0]+((style[1])?(chatEvents.chat.player):(chatEvents.chat.msg))+style[2]
+}
+
+} else {
+
+if(Math.random()>0.5){
+msg = msgs.gen[Math.floor(Math.random()*msgs.gen.length)]
+} else {
+msg = chatMsgCache[Math.floor(Math.random()*chatMsgCache.length)]
+}
+}
+}
+lastMsg = msg.toLowerCase()
+msg = typo(msg,0.03)
+if(Math.random()>0.75)msg=msg.toUpperCase()
+if(Math.random()>0.75)msg=msg.toLowerCase()
+api.broadcastMessage([
+{str:name+": ",style:{color:"#cef3ff"}},
+{str:msg,style:{color:"#fff"}}
+])
+}
+}
+onPlayerJoin=(pid)=>{
+let name = api.getEntityName(pid)
+chatEvents.join.player=(Math.random()<0.5)?(name.replace(/[^a-zA-Z]/g,'')):name
+chatEvents.join.talk=3
+guestNames = g()
+}
+onPlayerChat=(pid,msg,loc)=>{
+if(loc==="Tribe")return
+let name = api.getEntityName(pid)
+if(!msg.includes("**")){
+let i = Math.floor(Math.random()*chatMsgCache.length)
+chatMsgCache[i]=msg
+chatEvents.chat.player=(Math.random()<0.5)?(name.replace(/[^a-zA-Z]/g,'')):name
+chatEvents.chat.talk=Math.floor(Math.random()*Math.random()*16+1)
+chatEvents.chat.msg=msg
+chatEvents.chat.lasttime=api.now()
+if(Math.random()<0.3){
+api.broadcastMessage(guestNames[guestNames.length-1]+" joined",{color:"#cef3ff"})
+}
+let lom = msg.toLowerCase()
+responses[lastMsg] = lom
+lastMsg = lom
+}
+//*
+broadcasts.push([
+...(name==="Razenix"?[{str:"[GOAT] ",style:{color:"yellow"}}]:[]),
+{str:name+": ",style:{color:"#cef3ff"}},
+{str:msg,style:{color:"#fff"}}
+])
+return false
+/**/
+} 
+
